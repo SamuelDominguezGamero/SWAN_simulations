@@ -1,0 +1,1088 @@
+Assuming unrestricted shared filesystem usage.
+
+SNAKEMAKE
+=========
+  Date: 2026-10-21 11:39:39
+  Workflow ID: 592c04e4-96a6-4a10-8057-9fe22955755a
+  Platform: Linux-7.0.0-38-generic-x86_64-with-glibc2.43
+  Host: aura
+  User: samuel
+  Snakemake version: 9.24.0
+  Python version: 3.14.8 | packaged by conda-forge | (main, Oct 12 2026, 17:35:27) [GCC 15.3.0]
+  Command: /home/samuel/Desktop/CDClim/.pixi/envs/default/bin/snakemake --cores 10 -F
+  Snakefile: /home/samuel/Desktop/CDClim/tests/pipeline_snakemake_jinja2/Snakefile
+  Base directory: /home/samuel/Desktop/CDClim/tests/pipeline_snakemake_jinja2
+  Run directory: /home/samuel/Desktop/CDClim/tests/pipeline_snakemake_jinja2
+  Working directory: /home/samuel/Desktop/CDClim/tests/pipeline_snakemake_jinja2
+  Config file(s): []
+  Config MD5: 99914b932bd37a50b983c5e7c90ae93b
+
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 10
+Rules claiming more threads will be scaled down.
+Job stats:
+job                    count
+-------------------  -------
+generate_bathymetry        1
+render_input              50
+plot_bathymetry            1
+run_swan                  50
+all                        1
+total                    103
+
+Select jobs to execute...
+Execute 10 jobs...
+[Wed Oct 21 11:39:39 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_0015
+    jobid: 32
+    reason: Forced execution
+    wildcards: sim=0015
+    resources: tmpdir=/tmp
+[Wed Oct 21 11:39:39 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_0047
+    jobid: 96
+    reason: Forced execution
+    wildcards: sim=0047
+    resources: tmpdir=/tmp
+[Wed Oct 21 11:39:39 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_0017
+    jobid: 36
+    reason: Forced execution
+    wildcards: sim=0017
+    resources: tmpdir=/tmp
+[Wed Oct 21 11:39:39 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_0024
+    jobid: 50
+    reason: Forced execution
+    wildcards: sim=0024
+    resources: tmpdir=/tmp
+[Wed Oct 21 11:39:39 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_0002
+    jobid: 6
+    reason: Forced execution
+    wildcards: sim=0002
+    resources: tmpdir=/tmp
+[Wed Oct 21 11:39:39 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_0037
+    jobid: 76
+    reason: Forced execution
+    wildcards: sim=0037
+    resources: tmpdir=/tmp
+[Wed Oct 21 11:39:39 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_0042
+    jobid: 86
+    reason: Forced execution
+    wildcards: sim=0042
+    resources: tmpdir=/tmp
+[Wed Oct 21 11:39:39 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_0028
+    jobid: 58
+    reason: Forced execution
+    wildcards: sim=0028
+    resources: tmpdir=/tmp
+[Wed Oct 21 11:39:39 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_0006
+    jobid: 14
+    reason: Forced execution
+    wildcards: sim=0006
+    resources: tmpdir=/tmp
+[Wed Oct 21 11:39:39 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_0049
+    jobid: 100
+    reason: Forced execution
+    wildcards: sim=0049
+    resources: tmpdir=/tmp
+[Wed Oct 21 11:39:39 2026]
+Finished jobid: 58 (Rule: render_input)
+1 of 103 steps (1%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Wed Oct 21 11:39:39 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_0013
+    jobid: 28
+    reason: Forced execution
+    wildcards: sim=0013
+    resources: tmpdir=/tmp
+[Wed Oct 21 11:39:39 2026]
+Finished jobid: 14 (Rule: render_input)
+2 of 103 steps (2%) done
+[Wed Oct 21 11:39:39 2026]
+Finished jobid: 32 (Rule: render_input)
+3 of 103 steps (3%) done
+[Wed Oct 21 11:39:39 2026]
+Finished jobid: 36 (Rule: render_input)
+4 of 103 steps (4%) done
+[Wed Oct 21 11:39:39 2026]
+Finished jobid: 96 (Rule: render_input)
+5 of 103 steps (5%) done
+[Wed Oct 21 11:39:39 2026]
+Finished jobid: 50 (Rule: render_input)
+6 of 103 steps (6%) done
+[Wed Oct 21 11:39:39 2026]
+Finished jobid: 6 (Rule: render_input)
+7 of 103 steps (7%) done
+Select jobs to execute...
+Execute 6 jobs...
+[Wed Oct 21 11:39:39 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_0045
+    jobid: 92
+    reason: Forced execution
+    wildcards: sim=0045
+    resources: tmpdir=/tmp
+[Wed Oct 21 11:39:39 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_0048
+    jobid: 98
+    reason: Forced execution
+    wildcards: sim=0048
+    resources: tmpdir=/tmp
+[Wed Oct 21 11:39:39 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_0009
+    jobid: 20
+    reason: Forced execution
+    wildcards: sim=0009
+    resources: tmpdir=/tmp
+[Wed Oct 21 11:39:39 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_0014
+    jobid: 30
+    reason: Forced execution
+    wildcards: sim=0014
+    resources: tmpdir=/tmp
+[Wed Oct 21 11:39:39 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_0032
+    jobid: 66
+    reason: Forced execution
+    wildcards: sim=0032
+    resources: tmpdir=/tmp
+[Wed Oct 21 11:39:39 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_0041
+    jobid: 84
+    reason: Forced execution
+    wildcards: sim=0041
+    resources: tmpdir=/tmp
+[Wed Oct 21 11:39:39 2026]
+Finished jobid: 86 (Rule: render_input)
+8 of 103 steps (8%) done
+[Wed Oct 21 11:39:39 2026]
+Finished jobid: 76 (Rule: render_input)
+9 of 103 steps (9%) done
+[Wed Oct 21 11:39:39 2026]
+Finished jobid: 100 (Rule: render_input)
+10 of 103 steps (10%) done
+Select jobs to execute...
+Execute 3 jobs...
+[Wed Oct 21 11:39:39 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_0005
+    jobid: 12
+    reason: Forced execution
+    wildcards: sim=0005
+    resources: tmpdir=/tmp
+[Wed Oct 21 11:39:39 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_0031
+    jobid: 64
+    reason: Forced execution
+    wildcards: sim=0031
+    resources: tmpdir=/tmp
+[Wed Oct 21 11:39:39 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_0025
+    jobid: 52
+    reason: Forced execution
+    wildcards: sim=0025
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Wed Oct 21 11:39:39 2026]
+Finished jobid: 28 (Rule: render_input)
+11 of 103 steps (11%) done
+Execute 1 jobs...
+[Wed Oct 21 11:39:39 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_0029
+    jobid: 60
+    reason: Forced execution
+    wildcards: sim=0029
+    resources: tmpdir=/tmp
+[Wed Oct 21 11:39:39 2026]
+Finished jobid: 92 (Rule: render_input)
+12 of 103 steps (12%) done
+[Wed Oct 21 11:39:39 2026]
+Finished jobid: 20 (Rule: render_input)
+13 of 103 steps (13%) done
+Select jobs to execute...
+Execute 2 jobs...
+[Wed Oct 21 11:39:39 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_0003
+    jobid: 8
+    reason: Forced execution
+    wildcards: sim=0003
+    resources: tmpdir=/tmp
+[Wed Oct 21 11:39:39 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_0027
+    jobid: 56
+    reason: Forced execution
+    wildcards: sim=0027
+    resources: tmpdir=/tmp
+[Wed Oct 21 11:39:39 2026]
+Finished jobid: 52 (Rule: render_input)
+14 of 103 steps (14%) done
+[Wed Oct 21 11:39:39 2026]
+Finished jobid: 30 (Rule: render_input)
+15 of 103 steps (15%) done
+[Wed Oct 21 11:39:39 2026]
+Finished jobid: 66 (Rule: render_input)
+16 of 103 steps (16%) done
+[Wed Oct 21 11:39:39 2026]
+Finished jobid: 98 (Rule: render_input)
+17 of 103 steps (17%) done
+[Wed Oct 21 11:39:39 2026]
+Finished jobid: 12 (Rule: render_input)
+18 of 103 steps (17%) done
+[Wed Oct 21 11:39:39 2026]
+Finished jobid: 84 (Rule: render_input)
+19 of 103 steps (18%) done
+Select jobs to execute...
+Execute 6 jobs...
+[Wed Oct 21 11:39:39 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_0035
+    jobid: 72
+    reason: Forced execution
+    wildcards: sim=0035
+    resources: tmpdir=/tmp
+[Wed Oct 21 11:39:39 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_0022
+    jobid: 46
+    reason: Forced execution
+    wildcards: sim=0022
+    resources: tmpdir=/tmp
+[Wed Oct 21 11:39:39 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_0019
+    jobid: 40
+    reason: Forced execution
+    wildcards: sim=0019
+    resources: tmpdir=/tmp
+[Wed Oct 21 11:39:39 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_0026
+    jobid: 54
+    reason: Forced execution
+    wildcards: sim=0026
+    resources: tmpdir=/tmp
+[Wed Oct 21 11:39:39 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_0039
+    jobid: 80
+    reason: Forced execution
+    wildcards: sim=0039
+    resources: tmpdir=/tmp
+[Wed Oct 21 11:39:39 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_0040
+    jobid: 82
+    reason: Forced execution
+    wildcards: sim=0040
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Wed Oct 21 11:39:39 2026]
+Finished jobid: 64 (Rule: render_input)
+20 of 103 steps (19%) done
+Execute 1 jobs...
+[Wed Oct 21 11:39:39 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_0007
+    jobid: 16
+    reason: Forced execution
+    wildcards: sim=0007
+    resources: tmpdir=/tmp
+[Wed Oct 21 11:39:39 2026]
+Finished jobid: 8 (Rule: render_input)
+21 of 103 steps (20%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Wed Oct 21 11:39:39 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_0043
+    jobid: 88
+    reason: Forced execution
+    wildcards: sim=0043
+    resources: tmpdir=/tmp
+[Wed Oct 21 11:39:39 2026]
+Finished jobid: 60 (Rule: render_input)
+22 of 103 steps (21%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Wed Oct 21 11:39:39 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_0033
+    jobid: 68
+    reason: Forced execution
+    wildcards: sim=0033
+    resources: tmpdir=/tmp
+[Wed Oct 21 11:39:39 2026]
+Finished jobid: 46 (Rule: render_input)
+23 of 103 steps (22%) done
+[Wed Oct 21 11:39:39 2026]
+Finished jobid: 56 (Rule: render_input)
+24 of 103 steps (23%) done
+[Wed Oct 21 11:39:39 2026]
+Finished jobid: 40 (Rule: render_input)
+25 of 103 steps (24%) done
+Select jobs to execute...
+Execute 3 jobs...
+[Wed Oct 21 11:39:39 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_0044
+    jobid: 90
+    reason: Forced execution
+    wildcards: sim=0044
+    resources: tmpdir=/tmp
+[Wed Oct 21 11:39:39 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_0036
+    jobid: 74
+    reason: Forced execution
+    wildcards: sim=0036
+    resources: tmpdir=/tmp
+[Wed Oct 21 11:39:39 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_0018
+    jobid: 38
+    reason: Forced execution
+    wildcards: sim=0018
+    resources: tmpdir=/tmp
+[Wed Oct 21 11:39:39 2026]
+Finished jobid: 72 (Rule: render_input)
+26 of 103 steps (25%) done
+[Wed Oct 21 11:39:39 2026]
+Finished jobid: 80 (Rule: render_input)
+27 of 103 steps (26%) done
+[Wed Oct 21 11:39:39 2026]
+Finished jobid: 54 (Rule: render_input)
+28 of 103 steps (27%) done
+[Wed Oct 21 11:39:39 2026]
+Finished jobid: 82 (Rule: render_input)
+29 of 103 steps (28%) done
+[Wed Oct 21 11:39:39 2026]
+Finished jobid: 16 (Rule: render_input)
+30 of 103 steps (29%) done
+Select jobs to execute...
+Execute 5 jobs...
+[Wed Oct 21 11:39:39 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_0011
+    jobid: 24
+    reason: Forced execution
+    wildcards: sim=0011
+    resources: tmpdir=/tmp
+[Wed Oct 21 11:39:39 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_0004
+    jobid: 10
+    reason: Forced execution
+    wildcards: sim=0004
+    resources: tmpdir=/tmp
+[Wed Oct 21 11:39:39 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_0050
+    jobid: 102
+    reason: Forced execution
+    wildcards: sim=0050
+    resources: tmpdir=/tmp
+[Wed Oct 21 11:39:39 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_0023
+    jobid: 48
+    reason: Forced execution
+    wildcards: sim=0023
+    resources: tmpdir=/tmp
+[Wed Oct 21 11:39:39 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_0001
+    jobid: 4
+    reason: Forced execution
+    wildcards: sim=0001
+    resources: tmpdir=/tmp
+[Wed Oct 21 11:39:39 2026]
+Finished jobid: 68 (Rule: render_input)
+31 of 103 steps (30%) done
+[Wed Oct 21 11:39:39 2026]
+Finished jobid: 88 (Rule: render_input)
+32 of 103 steps (31%) done
+Select jobs to execute...
+Execute 2 jobs...
+[Wed Oct 21 11:39:39 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_0012
+    jobid: 26
+    reason: Forced execution
+    wildcards: sim=0012
+    resources: tmpdir=/tmp
+[Wed Oct 21 11:39:39 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_0030
+    jobid: 62
+    reason: Forced execution
+    wildcards: sim=0030
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Wed Oct 21 11:39:39 2026]
+Finished jobid: 90 (Rule: render_input)
+33 of 103 steps (32%) done
+Execute 1 jobs...
+[Wed Oct 21 11:39:39 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_0038
+    jobid: 78
+    reason: Forced execution
+    wildcards: sim=0038
+    resources: tmpdir=/tmp
+[Wed Oct 21 11:39:39 2026]
+Finished jobid: 74 (Rule: render_input)
+34 of 103 steps (33%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Wed Oct 21 11:39:39 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_0020
+    jobid: 42
+    reason: Forced execution
+    wildcards: sim=0020
+    resources: tmpdir=/tmp
+[Wed Oct 21 11:39:39 2026]
+Finished jobid: 38 (Rule: render_input)
+35 of 103 steps (34%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Wed Oct 21 11:39:39 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_0010
+    jobid: 22
+    reason: Forced execution
+    wildcards: sim=0010
+    resources: tmpdir=/tmp
+[Wed Oct 21 11:39:39 2026]
+Finished jobid: 102 (Rule: render_input)
+36 of 103 steps (35%) done
+[Wed Oct 21 11:39:39 2026]
+Finished jobid: 62 (Rule: render_input)
+37 of 103 steps (36%) done
+Select jobs to execute...
+Execute 2 jobs...
+[Wed Oct 21 11:39:39 2026]
+localrule generate_bathymetry:
+    input: config.json
+    output: inputs/bathymetry.bot
+    jobid: 2
+    reason: Forced execution
+    resources: tmpdir=/tmp
+[Wed Oct 21 11:39:39 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_0008
+    jobid: 18
+    reason: Forced execution
+    wildcards: sim=0008
+    resources: tmpdir=/tmp
+[Wed Oct 21 11:39:39 2026]
+Finished jobid: 10 (Rule: render_input)
+38 of 103 steps (37%) done
+[Wed Oct 21 11:39:39 2026]
+Finished jobid: 48 (Rule: render_input)
+39 of 103 steps (38%) done
+[Wed Oct 21 11:39:39 2026]
+Finished jobid: 4 (Rule: render_input)
+40 of 103 steps (39%) done
+[Wed Oct 21 11:39:39 2026]
+Finished jobid: 24 (Rule: render_input)
+41 of 103 steps (40%) done
+Select jobs to execute...
+Execute 4 jobs...
+[Wed Oct 21 11:39:39 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_0034
+    jobid: 70
+    reason: Forced execution
+    wildcards: sim=0034
+    resources: tmpdir=/tmp
+[Wed Oct 21 11:39:39 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_0021
+    jobid: 44
+    reason: Forced execution
+    wildcards: sim=0021
+    resources: tmpdir=/tmp
+[Wed Oct 21 11:39:39 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_0046
+    jobid: 94
+    reason: Forced execution
+    wildcards: sim=0046
+    resources: tmpdir=/tmp
+[Wed Oct 21 11:39:39 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_0016
+    jobid: 34
+    reason: Forced execution
+    wildcards: sim=0016
+    resources: tmpdir=/tmp
+[Wed Oct 21 11:39:39 2026]
+Finished jobid: 26 (Rule: render_input)
+42 of 103 steps (41%) done
+[Wed Oct 21 11:39:39 2026]
+Finished jobid: 78 (Rule: render_input)
+43 of 103 steps (42%) done
+[Wed Oct 21 11:39:39 2026]
+Finished jobid: 22 (Rule: render_input)
+44 of 103 steps (43%) done
+[Wed Oct 21 11:39:39 2026]
+Finished jobid: 42 (Rule: render_input)
+45 of 103 steps (44%) done
+[Wed Oct 21 11:39:39 2026]
+Finished jobid: 2 (Rule: generate_bathymetry)
+46 of 103 steps (45%) done
+Select jobs to execute...
+Execute 5 jobs...
+[Wed Oct 21 11:39:39 2026]
+localrule run_swan:
+    input: inputs/bathymetry.bot, inputs/INPUT_0041
+    output: outputs/0041.mat
+    jobid: 83
+    reason: Forced execution
+    wildcards: sim=0041
+    resources: tmpdir=/tmp
+[Wed Oct 21 11:39:39 2026]
+localrule run_swan:
+    input: inputs/bathymetry.bot, inputs/INPUT_0011
+    output: outputs/0011.mat
+    jobid: 23
+    reason: Forced execution
+    wildcards: sim=0011
+    resources: tmpdir=/tmp
+[Wed Oct 21 11:39:39 2026]
+localrule run_swan:
+    input: inputs/bathymetry.bot, inputs/INPUT_0010
+    output: outputs/0010.mat
+    jobid: 21
+    reason: Forced execution
+    wildcards: sim=0010
+    resources: tmpdir=/tmp
+[Wed Oct 21 11:39:39 2026]
+localrule run_swan:
+    input: inputs/bathymetry.bot, inputs/INPUT_0023
+    output: outputs/0023.mat
+    jobid: 47
+    reason: Forced execution
+    wildcards: sim=0023
+    resources: tmpdir=/tmp
+[Wed Oct 21 11:39:39 2026]
+localrule run_swan:
+    input: inputs/bathymetry.bot, inputs/INPUT_0044
+    output: outputs/0044.mat
+    jobid: 89
+    reason: Forced execution
+    wildcards: sim=0044
+    resources: tmpdir=/tmp
+[Wed Oct 21 11:39:39 2026]
+Finished jobid: 18 (Rule: render_input)
+47 of 103 steps (46%) done
+[Wed Oct 21 11:39:39 2026]
+Finished jobid: 70 (Rule: render_input)
+48 of 103 steps (47%) done
+[Wed Oct 21 11:39:39 2026]
+Finished jobid: 94 (Rule: render_input)
+49 of 103 steps (48%) done
+[Wed Oct 21 11:39:39 2026]
+Finished jobid: 44 (Rule: render_input)
+50 of 103 steps (49%) done
+[Wed Oct 21 11:39:39 2026]
+Finished jobid: 34 (Rule: render_input)
+51 of 103 steps (50%) done
+Select jobs to execute...
+Execute 5 jobs...
+[Wed Oct 21 11:39:39 2026]
+localrule run_swan:
+    input: inputs/bathymetry.bot, inputs/INPUT_0021
+    output: outputs/0021.mat
+    jobid: 43
+    reason: Forced execution
+    wildcards: sim=0021
+    resources: tmpdir=/tmp
+[Wed Oct 21 11:39:39 2026]
+localrule run_swan:
+    input: inputs/bathymetry.bot, inputs/INPUT_0017
+    output: outputs/0017.mat
+    jobid: 35
+    reason: Forced execution
+    wildcards: sim=0017
+    resources: tmpdir=/tmp
+[Wed Oct 21 11:39:39 2026]
+localrule run_swan:
+    input: inputs/bathymetry.bot, inputs/INPUT_0004
+    output: outputs/0004.mat
+    jobid: 9
+    reason: Forced execution
+    wildcards: sim=0004
+    resources: tmpdir=/tmp
+[Wed Oct 21 11:39:39 2026]
+localrule run_swan:
+    input: inputs/bathymetry.bot, inputs/INPUT_0030
+    output: outputs/0030.mat
+    jobid: 61
+    reason: Forced execution
+    wildcards: sim=0030
+    resources: tmpdir=/tmp
+[Wed Oct 21 11:39:39 2026]
+localrule run_swan:
+    input: inputs/bathymetry.bot, inputs/INPUT_0049
+    output: outputs/0049.mat
+    jobid: 99
+    reason: Forced execution
+    wildcards: sim=0049
+    resources: tmpdir=/tmp
+Select jobs to execute...
+Terminating processes on user request, this might take some time.
+RuleException:
+CalledProcessError in file "/home/samuel/Desktop/CDClim/tests/pipeline_snakemake_jinja2/Snakefile", line 54:
+Command 'set -euo pipefail;  
+        WORKDIR="tmp_run_0049"
+        mkdir -p "$WORKDIR"
+        
+        cp inputs/bathymetry.bot "$WORKDIR/bathymetry.bot"
+        cp inputs/INPUT_0049 "$WORKDIR/INPUT"
+        
+        cd "$WORKDIR"
+        swan.exe > /dev/null
+        cd ..
+        
+        mv "$WORKDIR/0049.mat" outputs/0049.mat
+        rm -rf "$WORKDIR"' died with <Signals.SIGINT: 2>.
+[Wed Oct 21 11:39:44 2026]
+Error in rule run_swan:
+    message: None
+    jobid: 99
+    input: inputs/bathymetry.bot, inputs/INPUT_0049
+    output: outputs/0049.mat
+    shell:
+        
+        WORKDIR="tmp_run_0049"
+        mkdir -p "$WORKDIR"
+        
+        cp inputs/bathymetry.bot "$WORKDIR/bathymetry.bot"
+        cp inputs/INPUT_0049 "$WORKDIR/INPUT"
+        
+        cd "$WORKDIR"
+        swan.exe > /dev/null
+        cd ..
+        
+        mv "$WORKDIR/0049.mat" outputs/0049.mat
+        rm -rf "$WORKDIR"
+        
+        (command exited with non-zero exit code)
+RuleException:
+CalledProcessError in file "/home/samuel/Desktop/CDClim/tests/pipeline_snakemake_jinja2/Snakefile", line 54:
+Command 'set -euo pipefail;  
+        WORKDIR="tmp_run_0017"
+        mkdir -p "$WORKDIR"
+        
+        cp inputs/bathymetry.bot "$WORKDIR/bathymetry.bot"
+        cp inputs/INPUT_0017 "$WORKDIR/INPUT"
+        
+        cd "$WORKDIR"
+        swan.exe > /dev/null
+        cd ..
+        
+        mv "$WORKDIR/0017.mat" outputs/0017.mat
+        rm -rf "$WORKDIR"' died with <Signals.SIGINT: 2>.
+[Wed Oct 21 11:39:44 2026]
+Error in rule run_swan:
+    message: None
+    jobid: 35
+    input: inputs/bathymetry.bot, inputs/INPUT_0017
+    output: outputs/0017.mat
+    shell:
+        
+        WORKDIR="tmp_run_0017"
+        mkdir -p "$WORKDIR"
+        
+        cp inputs/bathymetry.bot "$WORKDIR/bathymetry.bot"
+        cp inputs/INPUT_0017 "$WORKDIR/INPUT"
+        
+        cd "$WORKDIR"
+        swan.exe > /dev/null
+        cd ..
+        
+        mv "$WORKDIR/0017.mat" outputs/0017.mat
+        rm -rf "$WORKDIR"
+        
+        (command exited with non-zero exit code)
+RuleException:
+CalledProcessError in file "/home/samuel/Desktop/CDClim/tests/pipeline_snakemake_jinja2/Snakefile", line 54:
+Command 'set -euo pipefail;  
+        WORKDIR="tmp_run_0021"
+        mkdir -p "$WORKDIR"
+        
+        cp inputs/bathymetry.bot "$WORKDIR/bathymetry.bot"
+        cp inputs/INPUT_0021 "$WORKDIR/INPUT"
+        
+        cd "$WORKDIR"
+        swan.exe > /dev/null
+        cd ..
+        
+        mv "$WORKDIR/0021.mat" outputs/0021.mat
+        rm -rf "$WORKDIR"' died with <Signals.SIGINT: 2>.
+RuleException:
+CalledProcessError in file "/home/samuel/Desktop/CDClim/tests/pipeline_snakemake_jinja2/Snakefile", line 54:
+Command 'set -euo pipefail;  
+        WORKDIR="tmp_run_0004"
+        mkdir -p "$WORKDIR"
+        
+        cp inputs/bathymetry.bot "$WORKDIR/bathymetry.bot"
+        cp inputs/INPUT_0004 "$WORKDIR/INPUT"
+        
+        cd "$WORKDIR"
+        swan.exe > /dev/null
+        cd ..
+        
+        mv "$WORKDIR/0004.mat" outputs/0004.mat
+        rm -rf "$WORKDIR"' died with <Signals.SIGINT: 2>.
+RuleException:
+CalledProcessError in file "/home/samuel/Desktop/CDClim/tests/pipeline_snakemake_jinja2/Snakefile", line 54:
+Command 'set -euo pipefail;  
+        WORKDIR="tmp_run_0044"
+        mkdir -p "$WORKDIR"
+        
+        cp inputs/bathymetry.bot "$WORKDIR/bathymetry.bot"
+        cp inputs/INPUT_0044 "$WORKDIR/INPUT"
+        
+        cd "$WORKDIR"
+        swan.exe > /dev/null
+        cd ..
+        
+        mv "$WORKDIR/0044.mat" outputs/0044.mat
+        rm -rf "$WORKDIR"' died with <Signals.SIGINT: 2>.
+[Wed Oct 21 11:39:44 2026]
+Error in rule run_swan:
+    message: None
+    jobid: 9
+    input: inputs/bathymetry.bot, inputs/INPUT_0004
+    output: outputs/0004.mat
+    shell:
+        
+        WORKDIR="tmp_run_0004"
+        mkdir -p "$WORKDIR"
+        
+        cp inputs/bathymetry.bot "$WORKDIR/bathymetry.bot"
+        cp inputs/INPUT_0004 "$WORKDIR/INPUT"
+        
+        cd "$WORKDIR"
+        swan.exe > /dev/null
+        cd ..
+        
+        mv "$WORKDIR/0004.mat" outputs/0004.mat
+        rm -rf "$WORKDIR"
+        
+        (command exited with non-zero exit code)
+[Wed Oct 21 11:39:44 2026]
+Error in rule run_swan:
+    message: None
+    jobid: 43
+    input: inputs/bathymetry.bot, inputs/INPUT_0021
+    output: outputs/0021.mat
+    shell:
+        
+        WORKDIR="tmp_run_0021"
+        mkdir -p "$WORKDIR"
+        
+        cp inputs/bathymetry.bot "$WORKDIR/bathymetry.bot"
+        cp inputs/INPUT_0021 "$WORKDIR/INPUT"
+        
+        cd "$WORKDIR"
+        swan.exe > /dev/null
+        cd ..
+        
+        mv "$WORKDIR/0021.mat" outputs/0021.mat
+        rm -rf "$WORKDIR"
+        
+        (command exited with non-zero exit code)
+[Wed Oct 21 11:39:44 2026]
+Error in rule run_swan:
+    message: None
+    jobid: 89
+    input: inputs/bathymetry.bot, inputs/INPUT_0044
+    output: outputs/0044.mat
+    shell:
+        
+        WORKDIR="tmp_run_0044"
+        mkdir -p "$WORKDIR"
+        
+        cp inputs/bathymetry.bot "$WORKDIR/bathymetry.bot"
+        cp inputs/INPUT_0044 "$WORKDIR/INPUT"
+        
+        cd "$WORKDIR"
+        swan.exe > /dev/null
+        cd ..
+        
+        mv "$WORKDIR/0044.mat" outputs/0044.mat
+        rm -rf "$WORKDIR"
+        
+        (command exited with non-zero exit code)
+RuleException:
+CalledProcessError in file "/home/samuel/Desktop/CDClim/tests/pipeline_snakemake_jinja2/Snakefile", line 54:
+Command 'set -euo pipefail;  
+        WORKDIR="tmp_run_0023"
+        mkdir -p "$WORKDIR"
+        
+        cp inputs/bathymetry.bot "$WORKDIR/bathymetry.bot"
+        cp inputs/INPUT_0023 "$WORKDIR/INPUT"
+        
+        cd "$WORKDIR"
+        swan.exe > /dev/null
+        cd ..
+        
+        mv "$WORKDIR/0023.mat" outputs/0023.mat
+        rm -rf "$WORKDIR"' died with <Signals.SIGINT: 2>.
+RuleException:
+CalledProcessError in file "/home/samuel/Desktop/CDClim/tests/pipeline_snakemake_jinja2/Snakefile", line 54:
+Command 'set -euo pipefail;  
+        WORKDIR="tmp_run_0010"
+        mkdir -p "$WORKDIR"
+        
+        cp inputs/bathymetry.bot "$WORKDIR/bathymetry.bot"
+        cp inputs/INPUT_0010 "$WORKDIR/INPUT"
+        
+        cd "$WORKDIR"
+        swan.exe > /dev/null
+        cd ..
+        
+        mv "$WORKDIR/0010.mat" outputs/0010.mat
+        rm -rf "$WORKDIR"' died with <Signals.SIGINT: 2>.
+RuleException:
+CalledProcessError in file "/home/samuel/Desktop/CDClim/tests/pipeline_snakemake_jinja2/Snakefile", line 54:
+Command 'set -euo pipefail;  
+        WORKDIR="tmp_run_0041"
+        mkdir -p "$WORKDIR"
+        
+        cp inputs/bathymetry.bot "$WORKDIR/bathymetry.bot"
+        cp inputs/INPUT_0041 "$WORKDIR/INPUT"
+        
+        cd "$WORKDIR"
+        swan.exe > /dev/null
+        cd ..
+        
+        mv "$WORKDIR/0041.mat" outputs/0041.mat
+        rm -rf "$WORKDIR"' died with <Signals.SIGINT: 2>.
+[Wed Oct 21 11:39:44 2026]
+Error in rule run_swan:
+    message: None
+    jobid: 21
+    input: inputs/bathymetry.bot, inputs/INPUT_0010
+    output: outputs/0010.mat
+    shell:
+        
+        WORKDIR="tmp_run_0010"
+        mkdir -p "$WORKDIR"
+        
+        cp inputs/bathymetry.bot "$WORKDIR/bathymetry.bot"
+        cp inputs/INPUT_0010 "$WORKDIR/INPUT"
+        
+        cd "$WORKDIR"
+        swan.exe > /dev/null
+        cd ..
+        
+        mv "$WORKDIR/0010.mat" outputs/0010.mat
+        rm -rf "$WORKDIR"
+        
+        (command exited with non-zero exit code)
+[Wed Oct 21 11:39:44 2026]
+Error in rule run_swan:
+    message: None
+    jobid: 83
+    input: inputs/bathymetry.bot, inputs/INPUT_0041
+    output: outputs/0041.mat
+    shell:
+        
+        WORKDIR="tmp_run_0041"
+        mkdir -p "$WORKDIR"
+        
+        cp inputs/bathymetry.bot "$WORKDIR/bathymetry.bot"
+        cp inputs/INPUT_0041 "$WORKDIR/INPUT"
+        
+        cd "$WORKDIR"
+        swan.exe > /dev/null
+        cd ..
+        
+        mv "$WORKDIR/0041.mat" outputs/0041.mat
+        rm -rf "$WORKDIR"
+        
+        (command exited with non-zero exit code)
+RuleException:
+CalledProcessError in file "/home/samuel/Desktop/CDClim/tests/pipeline_snakemake_jinja2/Snakefile", line 54:
+Command 'set -euo pipefail;  
+        WORKDIR="tmp_run_0011"
+        mkdir -p "$WORKDIR"
+        
+        cp inputs/bathymetry.bot "$WORKDIR/bathymetry.bot"
+        cp inputs/INPUT_0011 "$WORKDIR/INPUT"
+        
+        cd "$WORKDIR"
+        swan.exe > /dev/null
+        cd ..
+        
+        mv "$WORKDIR/0011.mat" outputs/0011.mat
+        rm -rf "$WORKDIR"' died with <Signals.SIGINT: 2>.
+[Wed Oct 21 11:39:44 2026]
+Error in rule run_swan:
+    message: None
+    jobid: 47
+    input: inputs/bathymetry.bot, inputs/INPUT_0023
+    output: outputs/0023.mat
+    shell:
+        
+        WORKDIR="tmp_run_0023"
+        mkdir -p "$WORKDIR"
+        
+        cp inputs/bathymetry.bot "$WORKDIR/bathymetry.bot"
+        cp inputs/INPUT_0023 "$WORKDIR/INPUT"
+        
+        cd "$WORKDIR"
+        swan.exe > /dev/null
+        cd ..
+        
+        mv "$WORKDIR/0023.mat" outputs/0023.mat
+        rm -rf "$WORKDIR"
+        
+        (command exited with non-zero exit code)
+RuleException:
+CalledProcessError in file "/home/samuel/Desktop/CDClim/tests/pipeline_snakemake_jinja2/Snakefile", line 54:
+Command 'set -euo pipefail;  
+        WORKDIR="tmp_run_0030"
+        mkdir -p "$WORKDIR"
+        
+        cp inputs/bathymetry.bot "$WORKDIR/bathymetry.bot"
+        cp inputs/INPUT_0030 "$WORKDIR/INPUT"
+        
+        cd "$WORKDIR"
+        swan.exe > /dev/null
+        cd ..
+        
+        mv "$WORKDIR/0030.mat" outputs/0030.mat
+        rm -rf "$WORKDIR"' died with <Signals.SIGINT: 2>.
+[Wed Oct 21 11:39:44 2026]
+Error in rule run_swan:
+    message: None
+    jobid: 61
+    input: inputs/bathymetry.bot, inputs/INPUT_0030
+    output: outputs/0030.mat
+    shell:
+        
+        WORKDIR="tmp_run_0030"
+        mkdir -p "$WORKDIR"
+        
+        cp inputs/bathymetry.bot "$WORKDIR/bathymetry.bot"
+        cp inputs/INPUT_0030 "$WORKDIR/INPUT"
+        
+        cd "$WORKDIR"
+        swan.exe > /dev/null
+        cd ..
+        
+        mv "$WORKDIR/0030.mat" outputs/0030.mat
+        rm -rf "$WORKDIR"
+        
+        (command exited with non-zero exit code)
+[Wed Oct 21 11:39:44 2026]
+Error in rule run_swan:
+    message: None
+    jobid: 23
+    input: inputs/bathymetry.bot, inputs/INPUT_0011
+    output: outputs/0011.mat
+    shell:
+        
+        WORKDIR="tmp_run_0011"
+        mkdir -p "$WORKDIR"
+        
+        cp inputs/bathymetry.bot "$WORKDIR/bathymetry.bot"
+        cp inputs/INPUT_0011 "$WORKDIR/INPUT"
+        
+        cd "$WORKDIR"
+        swan.exe > /dev/null
+        cd ..
+        
+        mv "$WORKDIR/0011.mat" outputs/0011.mat
+        rm -rf "$WORKDIR"
+        
+        (command exited with non-zero exit code)
+Complete log(s): /home/samuel/Desktop/CDClim/tests/pipeline_snakemake_jinja2/.snakemake/log/2026-10-21T113938.978617.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

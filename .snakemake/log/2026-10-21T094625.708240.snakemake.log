@@ -1,0 +1,24 @@
+Assuming unrestricted shared filesystem usage.
+
+SNAKEMAKE
+=========
+  Date: 2026-10-21 09:46:25
+  Workflow ID: 984eb48b-3544-47e5-bd50-64ae26dfd371
+  Platform: Linux-7.0.0-38-generic-x86_64-with-glibc2.43
+  Host: aura
+  User: samuel
+  Snakemake version: 9.24.0
+  Python version: 3.14.8 | packaged by conda-forge | (main, Oct 12 2026, 17:35:27) [GCC 15.3.0]
+  Command: /home/samuel/Desktop/CDClim/.pixi/envs/default/bin/snakemake --cores 11
+  Snakefile: /home/samuel/Desktop/CDClim/tests/pipeline_snakemake_jinja2/Snakefile
+  Base directory: /home/samuel/Desktop/CDClim/tests/pipeline_snakemake_jinja2
+  Run directory: /home/samuel/Desktop/CDClim/tests/pipeline_snakemake_jinja2
+  Working directory: /home/samuel/Desktop/CDClim/tests/pipeline_snakemake_jinja2
+  Config file(s): []
+  Config MD5: 99914b932bd37a50b983c5e7c90ae93b
+
+Building DAG of jobs...
+MissingInputException in rule all in file "/home/samuel/Desktop/CDClim/tests/pipeline_snakemake_jinja2/Snakefile", line 8:
+Missing input files for rule all:
+    affected files:
+        figures/bathymetry.png

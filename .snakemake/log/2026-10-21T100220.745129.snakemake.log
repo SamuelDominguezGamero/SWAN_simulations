@@ -1,0 +1,245 @@
+Assuming unrestricted shared filesystem usage.
+
+SNAKEMAKE
+=========
+  Date: 2026-10-21 10:02:20
+  Workflow ID: 60f6f230-42df-47cc-9240-d5a554b64315
+  Platform: Linux-7.0.0-38-generic-x86_64-with-glibc2.43
+  Host: aura
+  User: samuel
+  Snakemake version: 9.24.0
+  Python version: 3.14.8 | packaged by conda-forge | (main, Oct 12 2026, 17:35:27) [GCC 15.3.0]
+  Command: /home/samuel/Desktop/CDClim/.pixi/envs/default/bin/snakemake --cores 11 -F
+  Snakefile: /home/samuel/Desktop/CDClim/tests/pipeline_snakemake_jinja2/Snakefile
+  Base directory: /home/samuel/Desktop/CDClim/tests/pipeline_snakemake_jinja2
+  Run directory: /home/samuel/Desktop/CDClim/tests/pipeline_snakemake_jinja2
+  Working directory: /home/samuel/Desktop/CDClim/tests/pipeline_snakemake_jinja2
+  Config file(s): []
+  Config MD5: 99914b932bd37a50b983c5e7c90ae93b
+
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 11
+Rules claiming more threads will be scaled down.
+Job stats:
+job                    count
+-------------------  -------
+generate_bathymetry        1
+render_input               8
+plot_bathymetry            1
+run_swan                   8
+all                        1
+total                     19
+
+Select jobs to execute...
+Execute 9 jobs...
+[Wed Oct 21 10:02:20 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_005
+    jobid: 12
+    reason: Forced execution
+    wildcards: sim=005
+    resources: tmpdir=/tmp
+[Wed Oct 21 10:02:20 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_006
+    jobid: 14
+    reason: Forced execution
+    wildcards: sim=006
+    resources: tmpdir=/tmp
+[Wed Oct 21 10:02:20 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_007
+    jobid: 16
+    reason: Forced execution
+    wildcards: sim=007
+    resources: tmpdir=/tmp
+[Wed Oct 21 10:02:20 2026]
+localrule generate_bathymetry:
+    input: config.json
+    output: inputs/bathymetry.bot
+    jobid: 2
+    reason: Forced execution
+    resources: tmpdir=/tmp
+[Wed Oct 21 10:02:20 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_008
+    jobid: 18
+    reason: Forced execution
+    wildcards: sim=008
+    resources: tmpdir=/tmp
+[Wed Oct 21 10:02:20 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_001
+    jobid: 4
+    reason: Forced execution
+    wildcards: sim=001
+    resources: tmpdir=/tmp
+[Wed Oct 21 10:02:20 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_002
+    jobid: 6
+    reason: Forced execution
+    wildcards: sim=002
+    resources: tmpdir=/tmp
+[Wed Oct 21 10:02:20 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_003
+    jobid: 8
+    reason: Forced execution
+    wildcards: sim=003
+    resources: tmpdir=/tmp
+[Wed Oct 21 10:02:20 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_004
+    jobid: 10
+    reason: Forced execution
+    wildcards: sim=004
+    resources: tmpdir=/tmp
+[Wed Oct 21 10:02:21 2026]
+Finished jobid: 12 (Rule: render_input)
+1 of 19 steps (5%) done
+[Wed Oct 21 10:02:21 2026]
+Finished jobid: 6 (Rule: render_input)
+2 of 19 steps (11%) done
+[Wed Oct 21 10:02:21 2026]
+Finished jobid: 10 (Rule: render_input)
+3 of 19 steps (16%) done
+[Wed Oct 21 10:02:21 2026]
+Finished jobid: 14 (Rule: render_input)
+4 of 19 steps (21%) done
+[Wed Oct 21 10:02:21 2026]
+Finished jobid: 18 (Rule: render_input)
+5 of 19 steps (26%) done
+[Wed Oct 21 10:02:21 2026]
+Finished jobid: 16 (Rule: render_input)
+6 of 19 steps (32%) done
+[Wed Oct 21 10:02:21 2026]
+Finished jobid: 8 (Rule: render_input)
+7 of 19 steps (37%) done
+[Wed Oct 21 10:02:21 2026]
+Finished jobid: 4 (Rule: render_input)
+8 of 19 steps (42%) done
+[Wed Oct 21 10:02:21 2026]
+Finished jobid: 2 (Rule: generate_bathymetry)
+9 of 19 steps (47%) done
+Select jobs to execute...
+Execute 9 jobs...
+[Wed Oct 21 10:02:21 2026]
+localrule run_swan:
+    input: inputs/bathymetry.bot, inputs/INPUT_005
+    output: outputs/005.mat
+    jobid: 11
+    reason: Forced execution
+    wildcards: sim=005
+    resources: tmpdir=/tmp
+[Wed Oct 21 10:02:21 2026]
+localrule run_swan:
+    input: inputs/bathymetry.bot, inputs/INPUT_006
+    output: outputs/006.mat
+    jobid: 13
+    reason: Forced execution
+    wildcards: sim=006
+    resources: tmpdir=/tmp
+[Wed Oct 21 10:02:21 2026]
+localrule run_swan:
+    input: inputs/bathymetry.bot, inputs/INPUT_007
+    output: outputs/007.mat
+    jobid: 15
+    reason: Forced execution
+    wildcards: sim=007
+    resources: tmpdir=/tmp
+[Wed Oct 21 10:02:21 2026]
+localrule run_swan:
+    input: inputs/bathymetry.bot, inputs/INPUT_008
+    output: outputs/008.mat
+    jobid: 17
+    reason: Forced execution
+    wildcards: sim=008
+    resources: tmpdir=/tmp
+[Wed Oct 21 10:02:21 2026]
+localrule plot_bathymetry:
+    input: inputs/bathymetry.bot, config.json
+    output: figures/bathymetry.png
+    jobid: 1
+    reason: Forced execution
+    resources: tmpdir=/tmp
+[Wed Oct 21 10:02:21 2026]
+localrule run_swan:
+    input: inputs/bathymetry.bot, inputs/INPUT_001
+    output: outputs/001.mat
+    jobid: 3
+    reason: Forced execution
+    wildcards: sim=001
+    resources: tmpdir=/tmp
+[Wed Oct 21 10:02:21 2026]
+localrule run_swan:
+    input: inputs/bathymetry.bot, inputs/INPUT_002
+    output: outputs/002.mat
+    jobid: 5
+    reason: Forced execution
+    wildcards: sim=002
+    resources: tmpdir=/tmp
+[Wed Oct 21 10:02:21 2026]
+localrule run_swan:
+    input: inputs/bathymetry.bot, inputs/INPUT_003
+    output: outputs/003.mat
+    jobid: 7
+    reason: Forced execution
+    wildcards: sim=003
+    resources: tmpdir=/tmp
+[Wed Oct 21 10:02:21 2026]
+localrule run_swan:
+    input: inputs/bathymetry.bot, inputs/INPUT_004
+    output: outputs/004.mat
+    jobid: 9
+    reason: Forced execution
+    wildcards: sim=004
+    resources: tmpdir=/tmp
+[Wed Oct 21 10:02:22 2026]
+Finished jobid: 1 (Rule: plot_bathymetry)
+10 of 19 steps (53%) done
+[Wed Oct 21 10:05:07 2026]
+Finished jobid: 5 (Rule: run_swan)
+11 of 19 steps (58%) done
+[Wed Oct 21 10:05:23 2026]
+Finished jobid: 3 (Rule: run_swan)
+12 of 19 steps (63%) done
+[Wed Oct 21 10:06:35 2026]
+Finished jobid: 15 (Rule: run_swan)
+13 of 19 steps (68%) done
+[Wed Oct 21 10:06:36 2026]
+Finished jobid: 13 (Rule: run_swan)
+14 of 19 steps (74%) done
+[Wed Oct 21 10:07:02 2026]
+Finished jobid: 11 (Rule: run_swan)
+15 of 19 steps (79%) done
+[Wed Oct 21 10:07:13 2026]
+Finished jobid: 17 (Rule: run_swan)
+16 of 19 steps (84%) done
+[Wed Oct 21 10:07:36 2026]
+Finished jobid: 9 (Rule: run_swan)
+17 of 19 steps (89%) done
+[Wed Oct 21 10:07:50 2026]
+Finished jobid: 7 (Rule: run_swan)
+18 of 19 steps (95%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Wed Oct 21 10:07:50 2026]
+localrule all:
+    input: figures/bathymetry.png, outputs/001.mat, outputs/002.mat, outputs/003.mat, outputs/004.mat, outputs/005.mat, outputs/006.mat, outputs/007.mat, outputs/008.mat
+    jobid: 0
+    reason: Forced execution
+    resources: tmpdir=/tmp
+[Wed Oct 21 10:07:50 2026]
+Finished jobid: 0 (Rule: all)
+19 of 19 steps (100%) done
+Complete log(s): /home/samuel/Desktop/CDClim/tests/pipeline_snakemake_jinja2/.snakemake/log/2026-10-21T100220.745129.snakemake.log

@@ -1,0 +1,379 @@
+Assuming unrestricted shared filesystem usage.
+
+SNAKEMAKE
+=========
+  Date: 2026-10-21 09:24:26
+  Workflow ID: 81b780b4-e599-4fff-954a-440e2f0d4362
+  Platform: Linux-7.0.0-38-generic-x86_64-with-glibc2.43
+  Host: aura
+  User: samuel
+  Snakemake version: 9.24.0
+  Python version: 3.14.8 | packaged by conda-forge | (main, Oct 12 2026, 17:35:27) [GCC 15.3.0]
+  Command: /home/samuel/Desktop/CDClim/.pixi/envs/default/bin/snakemake --cores 4
+  Snakefile: /home/samuel/Desktop/CDClim/tests/pipeline_snakemake_jinja2/Snakefile
+  Base directory: /home/samuel/Desktop/CDClim/tests/pipeline_snakemake_jinja2
+  Run directory: /home/samuel/Desktop/CDClim/tests/pipeline_snakemake_jinja2
+  Working directory: /home/samuel/Desktop/CDClim/tests/pipeline_snakemake_jinja2
+  Config file(s): []
+  Config MD5: 99914b932bd37a50b983c5e7c90ae93b
+
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Job stats:
+job                    count
+-------------------  -------
+generate_bathymetry        1
+render_input               8
+plot_bathymetry            1
+run_swan                   8
+all                        1
+total                     19
+
+Select jobs to execute...
+Execute 4 jobs...
+[Wed Oct 21 09:24:26 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_sim_008
+    jobid: 18
+    reason: Missing output files: inputs/INPUT_sim_008
+    wildcards: sim=sim_008
+    resources: tmpdir=/tmp
+[Wed Oct 21 09:24:26 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_sim_001
+    jobid: 4
+    reason: Missing output files: inputs/INPUT_sim_001
+    wildcards: sim=sim_001
+    resources: tmpdir=/tmp
+[Wed Oct 21 09:24:26 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_sim_002
+    jobid: 6
+    reason: Missing output files: inputs/INPUT_sim_002
+    wildcards: sim=sim_002
+    resources: tmpdir=/tmp
+[Wed Oct 21 09:24:26 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_sim_003
+    jobid: 8
+    reason: Missing output files: inputs/INPUT_sim_003
+    wildcards: sim=sim_003
+    resources: tmpdir=/tmp
+[Wed Oct 21 09:24:26 2026]
+Finished jobid: 8 (Rule: render_input)
+1 of 19 steps (5%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Wed Oct 21 09:24:26 2026]
+localrule generate_bathymetry:
+    input: config.json
+    output: inputs/bathymetry.bot
+    jobid: 2
+    reason: Missing output files: inputs/bathymetry.bot
+    resources: tmpdir=/tmp
+[Wed Oct 21 09:24:26 2026]
+Finished jobid: 4 (Rule: render_input)
+2 of 19 steps (11%) done
+[Wed Oct 21 09:24:26 2026]
+Finished jobid: 6 (Rule: render_input)
+3 of 19 steps (16%) done
+[Wed Oct 21 09:24:26 2026]
+Finished jobid: 18 (Rule: render_input)
+4 of 19 steps (21%) done
+Select jobs to execute...
+Execute 3 jobs...
+[Wed Oct 21 09:24:26 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_sim_006
+    jobid: 14
+    reason: Missing output files: inputs/INPUT_sim_006
+    wildcards: sim=sim_006
+    resources: tmpdir=/tmp
+[Wed Oct 21 09:24:26 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_sim_004
+    jobid: 10
+    reason: Missing output files: inputs/INPUT_sim_004
+    wildcards: sim=sim_004
+    resources: tmpdir=/tmp
+[Wed Oct 21 09:24:26 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_sim_007
+    jobid: 16
+    reason: Missing output files: inputs/INPUT_sim_007
+    wildcards: sim=sim_007
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Wed Oct 21 09:24:26 2026]
+Finished jobid: 16 (Rule: render_input)
+5 of 19 steps (26%) done
+Execute 1 jobs...
+[Wed Oct 21 09:24:26 2026]
+localrule render_input:
+    input: templates/INPUT.j2, config.json
+    output: inputs/INPUT_sim_005
+    jobid: 12
+    reason: Missing output files: inputs/INPUT_sim_005
+    wildcards: sim=sim_005
+    resources: tmpdir=/tmp
+[Wed Oct 21 09:24:26 2026]
+Finished jobid: 10 (Rule: render_input)
+6 of 19 steps (32%) done
+[Wed Oct 21 09:24:26 2026]
+Finished jobid: 2 (Rule: generate_bathymetry)
+7 of 19 steps (37%) done
+Select jobs to execute...
+Execute 2 jobs...
+[Wed Oct 21 09:24:26 2026]
+localrule run_swan:
+    input: inputs/bathymetry.bot, inputs/INPUT_sim_008
+    output: outputs/sim_008.mat
+    jobid: 17
+    reason: Missing output files: outputs/sim_008.mat; Input files updated by another job: inputs/INPUT_sim_008, inputs/bathymetry.bot
+    wildcards: sim=sim_008
+    resources: tmpdir=/tmp
+[Wed Oct 21 09:24:26 2026]
+localrule run_swan:
+    input: inputs/bathymetry.bot, inputs/INPUT_sim_001
+    output: outputs/sim_001.mat
+    jobid: 3
+    reason: Missing output files: outputs/sim_001.mat; Input files updated by another job: inputs/INPUT_sim_001, inputs/bathymetry.bot
+    wildcards: sim=sim_001
+    resources: tmpdir=/tmp
+[Wed Oct 21 09:24:26 2026]
+Finished jobid: 14 (Rule: render_input)
+8 of 19 steps (42%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Wed Oct 21 09:24:26 2026]
+localrule run_swan:
+    input: inputs/bathymetry.bot, inputs/INPUT_sim_003
+    output: outputs/sim_003.mat
+    jobid: 7
+    reason: Missing output files: outputs/sim_003.mat; Input files updated by another job: inputs/INPUT_sim_003, inputs/bathymetry.bot
+    wildcards: sim=sim_003
+    resources: tmpdir=/tmp
+[Wed Oct 21 09:24:26 2026]
+Finished jobid: 12 (Rule: render_input)
+9 of 19 steps (47%) done
+Select jobs to execute...
+RuleException:
+CalledProcessError in file "/home/samuel/Desktop/CDClim/tests/pipeline_snakemake_jinja2/Snakefile", line 54:
+Command 'set -euo pipefail;  
+        WORKDIR="tmp_run_sim_001"
+        mkdir -p "$WORKDIR"
+        
+        cp inputs/bathymetry.bot "$WORKDIR/bathymetry.bot"
+        cp inputs/INPUT_sim_001 "$WORKDIR/INPUT"
+        
+        cd "$WORKDIR"
+        swan.exe > /dev/null
+        cd ..
+        
+        mv "$WORKDIR/sim_001.mat" outputs/sim_001.mat
+        rm -rf "$WORKDIR"' returned non-zero exit status 1.
+[Wed Oct 21 09:24:26 2026]
+Error in rule run_swan:
+    message: None
+    jobid: 3
+    input: inputs/bathymetry.bot, inputs/INPUT_sim_001
+    output: outputs/sim_001.mat
+    shell:
+        
+        WORKDIR="tmp_run_sim_001"
+        mkdir -p "$WORKDIR"
+        
+        cp inputs/bathymetry.bot "$WORKDIR/bathymetry.bot"
+        cp inputs/INPUT_sim_001 "$WORKDIR/INPUT"
+        
+        cd "$WORKDIR"
+        swan.exe > /dev/null
+        cd ..
+        
+        mv "$WORKDIR/sim_001.mat" outputs/sim_001.mat
+        rm -rf "$WORKDIR"
+        
+        (command exited with non-zero exit code)
+RuleException:
+CalledProcessError in file "/home/samuel/Desktop/CDClim/tests/pipeline_snakemake_jinja2/Snakefile", line 54:
+Command 'set -euo pipefail;  
+        WORKDIR="tmp_run_sim_008"
+        mkdir -p "$WORKDIR"
+        
+        cp inputs/bathymetry.bot "$WORKDIR/bathymetry.bot"
+        cp inputs/INPUT_sim_008 "$WORKDIR/INPUT"
+        
+        cd "$WORKDIR"
+        swan.exe > /dev/null
+        cd ..
+        
+        mv "$WORKDIR/sim_008.mat" outputs/sim_008.mat
+        rm -rf "$WORKDIR"' returned non-zero exit status 1.
+[Wed Oct 21 09:24:26 2026]
+Error in rule run_swan:
+    message: None
+    jobid: 17
+    input: inputs/bathymetry.bot, inputs/INPUT_sim_008
+    output: outputs/sim_008.mat
+    shell:
+        
+        WORKDIR="tmp_run_sim_008"
+        mkdir -p "$WORKDIR"
+        
+        cp inputs/bathymetry.bot "$WORKDIR/bathymetry.bot"
+        cp inputs/INPUT_sim_008 "$WORKDIR/INPUT"
+        
+        cd "$WORKDIR"
+        swan.exe > /dev/null
+        cd ..
+        
+        mv "$WORKDIR/sim_008.mat" outputs/sim_008.mat
+        rm -rf "$WORKDIR"
+        
+        (command exited with non-zero exit code)
+Execute 1 jobs...
+[Wed Oct 21 09:24:26 2026]
+localrule plot_bathymetry:
+    input: inputs/bathymetry.bot, config.json
+    output: figures/bathymetry.png
+    jobid: 1
+    reason: Missing output files: figures/bathymetry.png; Input files updated by another job: inputs/bathymetry.bot
+    resources: tmpdir=/tmp
+RuleException:
+CalledProcessError in file "/home/samuel/Desktop/CDClim/tests/pipeline_snakemake_jinja2/Snakefile", line 54:
+Command 'set -euo pipefail;  
+        WORKDIR="tmp_run_sim_003"
+        mkdir -p "$WORKDIR"
+        
+        cp inputs/bathymetry.bot "$WORKDIR/bathymetry.bot"
+        cp inputs/INPUT_sim_003 "$WORKDIR/INPUT"
+        
+        cd "$WORKDIR"
+        swan.exe > /dev/null
+        cd ..
+        
+        mv "$WORKDIR/sim_003.mat" outputs/sim_003.mat
+        rm -rf "$WORKDIR"' returned non-zero exit status 1.
+[Wed Oct 21 09:24:26 2026]
+Error in rule run_swan:
+    message: None
+    jobid: 7
+    input: inputs/bathymetry.bot, inputs/INPUT_sim_003
+    output: outputs/sim_003.mat
+    shell:
+        
+        WORKDIR="tmp_run_sim_003"
+        mkdir -p "$WORKDIR"
+        
+        cp inputs/bathymetry.bot "$WORKDIR/bathymetry.bot"
+        cp inputs/INPUT_sim_003 "$WORKDIR/INPUT"
+        
+        cd "$WORKDIR"
+        swan.exe > /dev/null
+        cd ..
+        
+        mv "$WORKDIR/sim_003.mat" outputs/sim_003.mat
+        rm -rf "$WORKDIR"
+        
+        (command exited with non-zero exit code)
+RuleException:
+CalledProcessError in file "/home/samuel/Desktop/CDClim/tests/pipeline_snakemake_jinja2/Snakefile", line 30:
+Command 'set -euo pipefail;  python3 scripts/plot_bathymetry.py --input inputs/bathymetry.bot --config config.json --output figures/bathymetry.png' returned non-zero exit status 2.
+[Wed Oct 21 09:24:26 2026]
+Error in rule plot_bathymetry:
+    message: None
+    jobid: 1
+    input: inputs/bathymetry.bot, config.json
+    output: figures/bathymetry.png
+    shell:
+        python3 scripts/plot_bathymetry.py --input inputs/bathymetry.bot --config config.json --output figures/bathymetry.png
+        (command exited with non-zero exit code)
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look below for error messages
+[Wed Oct 21 09:24:26 2026]
+Error in rule plot_bathymetry:
+    message: None
+    jobid: 1
+    input: inputs/bathymetry.bot, config.json
+    output: figures/bathymetry.png
+    shell:
+        python3 scripts/plot_bathymetry.py --input inputs/bathymetry.bot --config config.json --output figures/bathymetry.png
+        (command exited with non-zero exit code)
+[Wed Oct 21 09:24:26 2026]
+Error in rule run_swan:
+    message: None
+    jobid: 7
+    input: inputs/bathymetry.bot, inputs/INPUT_sim_003
+    output: outputs/sim_003.mat
+    shell:
+        
+        WORKDIR="tmp_run_sim_003"
+        mkdir -p "$WORKDIR"
+        
+        cp inputs/bathymetry.bot "$WORKDIR/bathymetry.bot"
+        cp inputs/INPUT_sim_003 "$WORKDIR/INPUT"
+        
+        cd "$WORKDIR"
+        swan.exe > /dev/null
+        cd ..
+        
+        mv "$WORKDIR/sim_003.mat" outputs/sim_003.mat
+        rm -rf "$WORKDIR"
+        
+        (command exited with non-zero exit code)
+[Wed Oct 21 09:24:26 2026]
+Error in rule run_swan:
+    message: None
+    jobid: 17
+    input: inputs/bathymetry.bot, inputs/INPUT_sim_008
+    output: outputs/sim_008.mat
+    shell:
+        
+        WORKDIR="tmp_run_sim_008"
+        mkdir -p "$WORKDIR"
+        
+        cp inputs/bathymetry.bot "$WORKDIR/bathymetry.bot"
+        cp inputs/INPUT_sim_008 "$WORKDIR/INPUT"
+        
+        cd "$WORKDIR"
+        swan.exe > /dev/null
+        cd ..
+        
+        mv "$WORKDIR/sim_008.mat" outputs/sim_008.mat
+        rm -rf "$WORKDIR"
+        
+        (command exited with non-zero exit code)
+[Wed Oct 21 09:24:26 2026]
+Error in rule run_swan:
+    message: None
+    jobid: 3
+    input: inputs/bathymetry.bot, inputs/INPUT_sim_001
+    output: outputs/sim_001.mat
+    shell:
+        
+        WORKDIR="tmp_run_sim_001"
+        mkdir -p "$WORKDIR"
+        
+        cp inputs/bathymetry.bot "$WORKDIR/bathymetry.bot"
+        cp inputs/INPUT_sim_001 "$WORKDIR/INPUT"
+        
+        cd "$WORKDIR"
+        swan.exe > /dev/null
+        cd ..
+        
+        mv "$WORKDIR/sim_001.mat" outputs/sim_001.mat
+        rm -rf "$WORKDIR"
+        
+        (command exited with non-zero exit code)
+Complete log(s): /home/samuel/Desktop/CDClim/tests/pipeline_snakemake_jinja2/.snakemake/log/2026-10-21T092425.774088.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

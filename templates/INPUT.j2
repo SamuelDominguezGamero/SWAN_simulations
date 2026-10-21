@@ -1,0 +1,25 @@
+PROJ 'Surrogate' '{{ sim_id }}'
+$ Debemos tener en cuenta que SWAN no admite sim_id de más de 4 caracteres
+
+$
+$ --- MALLA GEOGRAFICA Y ESPECTRAL ---
+CGRID REGULAR 0. 0. 0. {{ lx }} {{ ly }} {{ nx - 1 }} {{ ny - 1 }} CIRCLE {{ dir_bins }} 0.04 1.0 30
+$
+$ --- BATIMETRIA ---
+INPGRID BOTTOM REGULAR 0. 0. 0. {{ nx - 1 }} {{ ny - 1 }} {{ dx }} {{ dy }}
+READINP BOTTOM 1.0 'bathymetry.bot' 1 0 FREE
+$
+$ --- CONDICIONES DE FRONTERA Y VIENTO ---
+BOU SIDE W CCW CON PAR {{ hs }} {{ tp }} {{ dir }} 20.
+WIND {{ wind_speed }} {{ dir }}
+$
+GEN3
+BREAKING
+FRICTION
+$ ny - 1
+$ --- SALIDA ---
+FRAME 'MAPA2D' 0. 0. 0. {{ lx }} {{ ly }} {{ nx - 1 }} {{ ny - 1 }}
+BLOCK 'MAPA2D' NOHEADER '{{ sim_id }}.mat' LAY-OUT 3 HS DIR DEP
+$
+COMPUTE
+STOP

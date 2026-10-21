@@ -1,0 +1,46 @@
+{
+    "grid": {
+        "lx": 10000.0,
+        "ly": 10000.0,
+        "nx": 101,
+        "ny": 101,
+        "dx": 100.0,
+        "dy": 100.0,
+        "dir_bins": 36
+    },
+    "bathymetry": {
+        "type": "dean_island",
+        "A": 0.12,
+        "island": {
+            "x0": 5000.0,
+            "y0": 5000.0,
+            "radius": 1200.0,
+            "min_depth": 0.5
+        },
+        "file": "inputs/bathymetry.bot",
+        "plot_bathymetry": true
+    },
+    "sampling": {
+        "method": "lhs",
+        "n_samples": 50,
+        "seed": 42,
+        "ranges": {
+            "hs": [
+                0.5,
+                4.5
+            ],
+            "tp": [
+                5.0,
+                14.0
+            ],
+            "dir": [
+                240.0,
+                300.0
+            ],
+            "wind_speed": [
+                0.0,
+                25.0
+            ]
+        }
+    }
+}
