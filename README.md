@@ -2,13 +2,15 @@ Workflow: SnakeMake
 
 Directory, file organisation: (https://tree.nathanfriend.com)
 
+```text
 └── tests/
     └── pipeline_snakemake_jinja2/
         ├── README.md
         ├── Snakefile
         ├── configs_JINJA2_SWAN.json
-        ├── inputs_swan/
-        │   ├── input_hs1.0_tp8.0.swn
+        ├── inputs/
+        │   ├── INPUT_0001
+        │   ├── bathymetry.bot
         │   └── ...
         ├── outputs_swan/
         │   ├── output_hs1.0_tp8.0.mat
@@ -23,6 +25,7 @@ Directory, file organisation: (https://tree.nathanfriend.com)
         └── figures/
             ├── bathymetries/
             └── simulations/
+```
 
 Always run all scripts from /pipeline_snakemake_jinja2, as all the paths are configured for this directory.
 
