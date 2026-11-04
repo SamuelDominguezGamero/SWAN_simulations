@@ -4,8 +4,16 @@
 *.nc
 *.dat
 *.bot
+*.csv
 
 # Logs y temporales
 *.log
 *.tmp
 *.bak
+
+
+# Imágenes y documentos
+*.pdf
+*.png
+*.jpg
+*.svg
