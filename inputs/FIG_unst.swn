@@ -1,0 +1,43 @@
+$********************* START-UP COMMANDS *********************
+PROJECT 'FIG_unst' 'RND'
+SET NAUTICAL
+MODE NONSTAT
+COORDINATES SPHERICAL CCM
+
+
+$********************* COMPUTATIONAL GRID ********************
+CGRID UNSTRUCTURED CIRCLE 72 0.0025 0.075
+READ UNSTRUCTURED
+
+
+$** HS, TM provided by : https://data.marine.copernicus.eu/product/NWSHELF_REANALYSIS_WAV_004_015 **
+INPGRID HSS REG -4 50 0 429 888 0.030303001 0.013511658 EXC -99.0 NONSTAT 20220101 3. HR 20220401
+READINP HSS 1 'Hs_WW3.inp' 3 0 FREE
+
+INPGRID TSS REG -4 50 0 429 888 0.030303001 0.013511658 EXC -99.0 NONSTAT 20220101 3. HR 20220401
+READINP TSS 1 'Tm_WW3.inp' 3 0 FREE
+
+
+$******************** BOUNDARY CONDITIONS ********************
+include 'IGsource15.inp'
+
+
+$************************** PHYSICS **************************
+FRIC JON 0.02
+OFF QUAD
+OFF BREA
+OFF WCAP
+
+
+$******************* NUMERICAL PARAMETERS ********************
+PROP BSBT
+NUM ACCUR NONSTAT mxitns=50
+
+
+$********************** OUTPUT REQUESTS **********************
+POINTS 'RIG' FILE 'NSP_IG.txt'
+SPEC 'RIG' SPEC2D 'NSP_IG.spec2D' OUTP 20220101 3. HR
+
+$********************* CLOSING COMMANDS **********************
+COMPUTE NONSTAT 20220101 3. HR 20220401
+STOP

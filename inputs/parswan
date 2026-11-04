@@ -1,0 +1,11 @@
+#PBS -l nodes=1:ppn=20
+#PBS -o swanout
+
+cd $PBS_O_WORKDIR
+
+swanrun() {
+   runid=`basename $1 .swn`
+   swan.run -infile $runid -back no
+}
+runid=FIG_unst
+swanrun $runid.swn

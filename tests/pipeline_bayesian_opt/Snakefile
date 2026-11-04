@@ -1,1 +1,29 @@
 # Reglas de simulación y evaluación para el Workflow
+# Snakemake gestiona la ejecución reproducible y el control de scratch buffers.
+
+rule all:
+    input:
+        "current_error.txt"
+
+# 1. Simulación física del modelo numérico
+rule simulate:
+    input:
+        params="current_params.txt"
+    output:
+        # Se declara como temp() para que Snakemake purgue el archivo temporal
+        # una vez evaluado el error, evitando saturar disco con simulaciones intermedias.
+        sim=temp("current_sim.csv")
+    shell:
+        "julia --project=. model.jl sim {output.sim} {input.params}"
+
+# 2. Evaluación del error contra la verdad de referencia
+rule evaluate_error:
+    input:
+        obs="data/observations.csv",
+        sim="current_sim.csv"
+    output:
+        err="current_error.txt"
+    params:
+        metric="mae"  # Para cambiar de métrica, solo alteras este string (ej: "rmse", "si")
+    shell:
+        "julia --project=@. metrics.jl {input.obs} {input.sim} {output.err} {params.metric}"

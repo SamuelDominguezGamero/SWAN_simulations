@@ -1,0 +1,68 @@
+Assuming unrestricted shared filesystem usage.
+
+SNAKEMAKE
+=========
+  Date: 2026-11-03 13:36:53
+  Workflow ID: 374d0486-5628-4117-92dc-d872d1bfc2b8
+  Platform: Linux-7.0.0-38-generic-x86_64-with-glibc2.43
+  Host: aura
+  User: samuel
+  Snakemake version: 9.24.0
+  Python version: 3.14.8 | packaged by conda-forge | (main, Oct 12 2026, 17:35:27) [GCC 15.3.0]
+  Command: /home/samuel/Desktop/CDClim/.pixi/envs/default/bin/snakemake --cores 4
+  Snakefile: /home/samuel/Desktop/CDClim/SWAN_simulations/tests/pipeline_bayesian_opt/Snakefile
+  Base directory: /home/samuel/Desktop/CDClim/SWAN_simulations/tests/pipeline_bayesian_opt
+  Run directory: /home/samuel/Desktop/CDClim/SWAN_simulations/tests/pipeline_bayesian_opt
+  Working directory: /home/samuel/Desktop/CDClim/SWAN_simulations/tests/pipeline_bayesian_opt
+  Config file(s): []
+  Config MD5: 99914b932bd37a50b983c5e7c90ae93b
+
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Job stats:
+job               count
+--------------  -------
+simulate              1
+evaluate_error        1
+all                   1
+total                 3
+
+Select jobs to execute...
+Execute 1 jobs...
+[Tue Nov  3 13:36:53 2026]
+localrule simulate:
+    input: current_params.txt
+    output: current_sim.csv
+    jobid: 2
+    reason: Missing output files: current_sim.csv; Updated input files: current_params.txt
+    resources: tmpdir=/tmp
+[Tue Nov  3 13:36:57 2026]
+Finished jobid: 2 (Rule: simulate)
+1 of 3 steps (33%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Tue Nov  3 13:36:57 2026]
+localrule evaluate_error:
+    input: data/observations.csv, current_sim.csv
+    output: current_error.txt
+    jobid: 1
+    reason: Input files updated by another job: current_sim.csv
+    resources: tmpdir=/tmp
+[Tue Nov  3 13:36:59 2026]
+Finished jobid: 1 (Rule: evaluate_error)
+2 of 3 steps (67%) done
+Removing temporary output current_sim.csv.
+Select jobs to execute...
+Execute 1 jobs...
+[Tue Nov  3 13:36:59 2026]
+localrule all:
+    input: current_error.txt
+    jobid: 0
+    reason: Input files updated by another job: current_error.txt
+    resources: tmpdir=/tmp
+[Tue Nov  3 13:36:59 2026]
+Finished jobid: 0 (Rule: all)
+3 of 3 steps (100%) done
+Complete log(s): /home/samuel/Desktop/CDClim/SWAN_simulations/tests/pipeline_bayesian_opt/.snakemake/log/2026-11-03T133653.631207.snakemake.log
