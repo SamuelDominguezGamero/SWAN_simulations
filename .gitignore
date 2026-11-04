@@ -1,1 +1,10 @@
+# Archivos de datos y modelos
+*.mat
 *.inp
+*.nc
+*.dat
+
+# Logs y temporales
+*.log
+*.tmp
+*.bak
