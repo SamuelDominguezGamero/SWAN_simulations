@@ -3,8 +3,10 @@
 *.inp
 *.nc
 *.dat
-*.bot
+*.bot # batimetrias de SWAN
 *.csv
+*.j2 # plantillas de jinja2
+
 
 # Logs y temporales
 *.log
