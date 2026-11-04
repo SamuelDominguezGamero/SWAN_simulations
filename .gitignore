@@ -3,6 +3,7 @@
 *.inp
 *.nc
 *.dat
+*.bot
 
 # Logs y temporales
 *.log
